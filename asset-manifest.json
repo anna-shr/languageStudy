@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/languageStudy/static/css/main.108cb184.css",
+    "main.js": "/languageStudy/static/js/main.e37f7284.js",
+    "static/js/787.0ede400a.chunk.js": "/languageStudy/static/js/787.0ede400a.chunk.js",
+    "index.html": "/languageStudy/index.html",
+    "main.108cb184.css.map": "/languageStudy/static/css/main.108cb184.css.map",
+    "main.e37f7284.js.map": "/languageStudy/static/js/main.e37f7284.js.map",
+    "787.0ede400a.chunk.js.map": "/languageStudy/static/js/787.0ede400a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.108cb184.css",
+    "static/js/main.e37f7284.js"
+  ]
+}
