@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+}
+
+input,
+textarea {
+  width: 100%;
+  display: block;
+  height: 30px;
+}
+
+input:hover {
+  cursor: pointer;
+  box-shadow: -1px -1px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  /* padding: base-spacing-unit; */
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
