@@ -4,7 +4,7 @@
     border: 1px solid #545353;
     width: 250px;
     height: 350px;
-    margin: 50px auto;
+    margin: 50px 30px;
     background-color: antiquewhite;
     box-shadow: -1px -1px 0px rgba(0, 0, 0, 0.2);
     transition: ease-in-out 0.1s;
@@ -19,6 +19,7 @@
 .card-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .word {
@@ -45,10 +46,31 @@
     font-size: 14px;
 }
 
+.showTranslation:hover {
+    transform: scale(1.01);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4), inset 0 0 0 99999px rgba(218, 213, 213, 0.2);
+}
+
 .hide {
     display: none;
 }
 
 .translate {
     margin-top: 65px;
+}
+
+.arrow {
+    background-color: #545353;
+    padding: 7px 13px 10px;
+    border-radius: 50%;
+    display: block;
+    height: fit-content;
+    color: aliceblue;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    transform: scale(1.01);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4), inset 0 0 0 99999px rgba(218, 213, 213, 0.2);
 }

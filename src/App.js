@@ -4,7 +4,7 @@ import List from './Components/List/List';
 import Card from './Components/Card/Card';
 import Footer from './Components/Footer/Footer';
 import TopList from './Components/TopList/TopList.jsx';
-import words from './wordsList';
+import words from './wordsList.js';
 
 import React from 'react';
 
@@ -13,10 +13,8 @@ function App() {
   document.title = "Language study"
 
   const handleCancelClick = () => {
-    return <TopList/>
+    return <TopList />
   }
-
-
 
   return (
     <>
@@ -25,9 +23,9 @@ function App() {
       <Header />
 
       <Card
-        word={"english"}
-        transcription={"[transcription]"}
-        translate={"russian"}
+        // word={words[counter].english}
+        // transcription={words[1].transcription}
+        // translate={words[1].russian}
       />
 
       <div className="list">
@@ -52,7 +50,6 @@ function App() {
             </div>
 
 
-
             {words.map((words, index) => (
               <List
                 key={index}
@@ -67,7 +64,6 @@ function App() {
         </div >
       </div >
 
-      <List />
       <Footer />
     </>
   );
