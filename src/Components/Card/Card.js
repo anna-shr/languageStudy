@@ -53,10 +53,9 @@ function Card(props) {
 
       <div className="card" onClick={handleCardClick}>
         <p className='word'>{words[counter].english}</p>
-        <p className='transcription'>{props.transcription}</p>
+        <p className='transcription'>{words[counter].transcription}</p>
         <button className={"showTranslation " + (hide ? "hide" : "")} onClick={handleButtonClick}>Перевести</button>
-        <p className={"translate " + (hide ? "" : "hide")}>{props.translate}</p>
-        <p className='tags'>{props.tags}</p>
+        <p className={"translate " + (hide ? "" : "hide")}>{words[counter].russian}</p>
       </div>
 
       <div className="arrow" onClick={handleArrowRight}> → </div>
