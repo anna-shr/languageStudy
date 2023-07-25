@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './List.scss';
+import words from '../../wordsList.js';
 
 function List(props) {
 

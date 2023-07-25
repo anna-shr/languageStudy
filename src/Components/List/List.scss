@@ -10,6 +10,7 @@
 
 .table {
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .table-header {
@@ -32,6 +33,10 @@
 
 .header__item {
   text-transform: uppercase;
+}
+
+.header__item.top{
+color: white;
 }
 
 .filter__link {
