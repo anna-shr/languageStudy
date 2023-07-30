@@ -20,7 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 70vh;
 }
 
 .word {
@@ -52,6 +52,11 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4), inset 0 0 0 99999px rgba(218, 213, 213, 0.2);
 }
 
+.showTranslation:focus {
+    transform: scale(1.01);
+    box-shadow: 2px 2px 5px rgb(88, 251, 159), inset 0 0 0 99999px rgba(218, 213, 213, 0.2);
+}
+
 .hide {
     display: none;
 }
@@ -75,3 +80,8 @@
     transform: scale(1.01);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4), inset 0 0 0 99999px rgba(218, 213, 213, 0.2);
 }
+
+.cards-counter {
+    text-align: center;
+    padding-top: 50px;
+  }

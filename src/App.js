@@ -62,7 +62,14 @@ function App() {
             </div >
           </div >
         } />
-        <Route exact path="/game" element={<Card />} />
+        <Route exact path="/game" 
+        element={
+          <>
+          {/* <div className="cards-counter">Карточек изучено: </div> */}
+        
+        <Card />
+        </>}
+        />
         <Route path="*" element={<EmptyPage />} />
         <Route path="/" element={
           <div className="list">

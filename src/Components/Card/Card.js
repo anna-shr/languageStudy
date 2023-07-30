@@ -1,19 +1,24 @@
 
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import './Card.css';
 import words from '../../wordsList.js';
+
 
 function Card(props) {
 	const [hide, changeVisibility] = useState(false);
 	let [counter, changeCounter] = useState(0);
+	let [wordsCounter, changeNumber] = useState(0);
+	let [isPopped, setPop] = useState(false);
 
 	const handleArrowLeft = () => {
 		if (counter === 0) {
+			alert('Это первая карточка');
 			return;
 		} else {
 			changeCounter((counter = counter - 1));
+			if (hide) changeVisibility(!hide);
 		}
-		console.log(counter);
 	};
 
 	const handleArrowRight = () => {
@@ -22,10 +27,16 @@ function Card(props) {
 			return;
 		} else {
 			changeCounter((counter = counter + 1));
+			if (hide) changeVisibility(!hide);
+			setPop(isPopped = false);
 		}
 	};
 
 	const handleButtonClick = () => {
+		if (isPopped === false) {
+			setPop(isPopped = true);
+			changeNumber(wordsCounter = wordsCounter + 1);
+		}
 		changeVisibility(!hide);
 	};
 
@@ -33,8 +44,17 @@ function Card(props) {
 		if (hide) changeVisibility(!hide);
 	};
 
+	let textInput = null;
+	useEffect(()=>{
+	  textInput.focus();
+	})
+
 	return (
+		<>
+		<div className="cards-counter">Карточек изучено: {wordsCounter}</div>
 		<div className='card-wrapper'>
+			
+
 			<div className='arrow' onClick={handleArrowLeft}>
 				{' '}
 				←{' '}
@@ -43,7 +63,8 @@ function Card(props) {
 			<div className='card' onClick={handleCardClick}>
 				<p className='word'>{words[counter]?.english || props.word}</p>
 				<p className='transcription'>{words[counter]?.transcription || props.transcription}</p>
-				<button className={'showTranslation ' + (hide ? 'hide' : '')} onClick={handleButtonClick}>
+				<button className={'showTranslation ' + (hide ? 'hide' : '')} onClick={handleButtonClick}
+				ref={(button) => { textInput = button; }}>
 					Перевести
 				</button>
 				<p className={'translate ' + (hide ? '' : 'hide')}>{words[counter]?.russian || props.translate}</p>
@@ -55,6 +76,7 @@ function Card(props) {
 				→{' '}
 			</div>
 		</div>
+		</>
 	);
 }
 
