@@ -11,14 +11,29 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import React from 'react';
+import React, { useState } from 'react';
 
 function App() {
   document.title = "Language study"
 
+  let [isEmpty1, setIsEmpty1] = useState(false);
+  let [isEmpty2, setIsEmpty2] = useState(false);
+  let [isEmpty3, setIsEmpty3] = useState(false);
+  let [isEmpty4, setIsEmpty4] = useState(false);
+
+
+  
+
+
   const handleCancelClick = () => {
     return <TopList />
   }
+
+  const [wordsStudied, setWordsStudied] = useState(0);
+
+  const handleCountWordsStudied = () => {
+    setWordsStudied(wordsStudied + 1);
+  };
 
   return (
     <Router>
@@ -41,10 +56,22 @@ function App() {
               <div className="table-content">
 
                 <div className="table-row">
-                  <TopList />
+
+                  <TopList 
+                  isEmpty1={isEmpty1}
+                  isEmpty2={isEmpty2}
+                  isEmpty3={isEmpty3}
+                  isEmpty4={isEmpty4}
+                  />
+
                   <div className="table-data index">
-                    <a class="button primary save">Save</a>
-                    <a className="button touch cancel" onClick={handleCancelClick}></a>
+                    <a href='./' className='button primary save'>
+												Save
+											</a>
+                    <a href='./' className='button touch cancel' onClick={handleCancelClick}>
+                      {' '}
+                    </a>
+
                   </div>
                 </div>
 
@@ -62,13 +89,11 @@ function App() {
             </div >
           </div >
         } />
-        <Route exact path="/game" 
-        element={
-          <>
-          {/* <div className="cards-counter">Карточек изучено: </div> */}
-        
-        <Card />
-        </>}
+        <Route exact path="/game"
+          element={
+            <>
+              <Card onClick={handleCountWordsStudied} wordsStudied={wordsStudied} />
+            </>}
         />
         <Route path="*" element={<EmptyPage />} />
         <Route path="/" element={
@@ -87,8 +112,16 @@ function App() {
                 <div className="table-row">
                   <TopList />
                   <div className="table-data index">
-                    <a class="button primary save">Save</a>
-                    <a className="button touch cancel" onClick={handleCancelClick}></a>
+                    {/* <a class="button primary save">Save</a>
+                    <a className="button touch cancel" onClick={handleCancelClick}></a> */}
+
+                    <a href='./' className='button primary save'>
+                      Save
+                    </a>
+                    <a href='./' className='button touch cancel' onClick={handleCancelClick}>
+                      {' '}
+                    </a>
+
                   </div>
                 </div>
 

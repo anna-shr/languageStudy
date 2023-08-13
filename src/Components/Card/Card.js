@@ -16,7 +16,8 @@ function Card(props) {
 			alert('Это первая карточка');
 			return;
 		} else {
-			changeCounter((counter = counter - 1));
+			// changeCounter((counter = counter - 1));
+			changeCounter((counter - 1));
 			if (hide) changeVisibility(!hide);
 		}
 	};
@@ -26,16 +27,23 @@ function Card(props) {
 			alert('Карточки закончились!');
 			return;
 		} else {
-			changeCounter((counter = counter + 1));
+			changeCounter((counter + 1));
 			if (hide) changeVisibility(!hide);
-			setPop(isPopped = false);
+			setPop(false);
 		}
 	};
 
 	const handleButtonClick = () => {
-		if (isPopped === false) {
-			setPop(isPopped = true);
-			changeNumber(wordsCounter = wordsCounter + 1);
+			if (!isPopped) {
+			setPop(true);
+
+			//!!!!!!!
+			if (props.onClick) {
+				props.onClick();
+			}
+			//!!!!!!!
+
+			changeNumber(wordsCounter + 1);
 		}
 		changeVisibility(!hide);
 	};
@@ -45,13 +53,14 @@ function Card(props) {
 	};
 
 	let textInput = null;
-	useEffect(()=>{
-	  textInput.focus();
-	})
+	useEffect(() => {
+		textInput.focus();
+	  }, [counter]);
 
 	return (
 		<>
-		<div className="cards-counter">Карточек изучено: {wordsCounter}</div>
+		{/* <div className="cards-counter">Карточек изучено: {wordsCounter}</div> */}
+		<div className="cards-counter">Карточек изучено: {props.wordsStudied}</div>
 		<div className='card-wrapper'>
 			
 
