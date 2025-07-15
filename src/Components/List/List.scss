@@ -108,8 +108,6 @@ $gw-red: rgb(192, 57, 43);
   text-align: center;
 }
 
-.inlineIcon {}
-
 .edit:before,
 .save:before,
 .new:before,
@@ -199,13 +197,21 @@ $gw-red: rgb(192, 57, 43);
   border: 1px solid red;
 }
 
-a.disabled {
+button.disabled {
   // pointer-events: none;
   cursor: default;
   background-color: #ccc;
 }
 
-a.disabled:hover {
+button.disabled:hover {
   transform: scale(1);
   box-shadow: none;
 }
+
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
+
