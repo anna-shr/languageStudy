@@ -1,7 +1,6 @@
-// ErrorDisplay.jsx
 import React from 'react';
 import PropTypes from 'prop-types';
-import './error.css'; // Стили подключим ниже
+import './error.css';
 
 const ErrorDisplay = ({ error, onRetry }) => {
   return (
