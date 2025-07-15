@@ -3,10 +3,10 @@ import words from './wordsList.js';
 
 export const WordsContext = createContext(words);
 
-export const WordsContextProvider = ({ children }) => {
+export const WordsProvider = ({ children }) => {
   return (
     <WordsContext.Provider value={words}>
-      {children}
+           {children}
     </WordsContext.Provider>
   );
 };

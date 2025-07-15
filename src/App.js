@@ -17,7 +17,8 @@ import ErrorDisplay from './error';
 function App() {
   document.title = "Language study";
 
-  const [words, setWords] = useState([]);
+  const contextWords = useContext(WordsContext);
+   const [words, setWords] = useState(contextWords);
   const [isLoading, setIsLoading] = useState(true); // Индикатор загрузки
   const [error, setError] = useState(null); // Ошибка при загрузке
 
@@ -102,6 +103,7 @@ function App() {
   }
 
   return (
+  <WordsContext.Provider>
     <Router>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       <Header />
@@ -166,7 +168,7 @@ function App() {
                 </div>
                 {words.map((word, index) => (
                   <List
-                    id={word.id} // Обязательно передаем ID
+                    id={word.id}
                     key={index}
                     index={index + 1}
                     word={word.english}
@@ -182,6 +184,7 @@ function App() {
       </Routes>
       <Footer />
     </Router>
+  </WordsContext.Provider>
   );
 }
 
