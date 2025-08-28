@@ -68,7 +68,10 @@ const App = observer(() => {
   return (
     <Router>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+      <div className="main-content">
       <Header />
+
+      
       <Routes>
         <Route path="/languageStudy" element={
           <div className="list">
@@ -145,6 +148,7 @@ const App = observer(() => {
         } />
       </Routes>
       <Footer />
+      </div>
     </Router>
   );
 });
