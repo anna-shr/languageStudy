@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/languageStudy/static/css/main.20cb9b46.css",
-    "main.js": "/languageStudy/static/js/main.c701f5f9.js",
+    "main.css": "/languageStudy/static/css/main.de05b406.css",
+    "main.js": "/languageStudy/static/js/main.f5fb19c1.js",
     "static/js/787.1c8d8400.chunk.js": "/languageStudy/static/js/787.1c8d8400.chunk.js",
     "index.html": "/languageStudy/index.html",
-    "main.20cb9b46.css.map": "/languageStudy/static/css/main.20cb9b46.css.map",
-    "main.c701f5f9.js.map": "/languageStudy/static/js/main.c701f5f9.js.map",
+    "main.de05b406.css.map": "/languageStudy/static/css/main.de05b406.css.map",
+    "main.f5fb19c1.js.map": "/languageStudy/static/js/main.f5fb19c1.js.map",
     "787.1c8d8400.chunk.js.map": "/languageStudy/static/js/787.1c8d8400.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.20cb9b46.css",
-    "static/js/main.c701f5f9.js"
+    "static/css/main.de05b406.css",
+    "static/js/main.f5fb19c1.js"
   ]
 }
