@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/languageStudy/static/css/main.a9c2f64c.css",
-    "main.js": "/languageStudy/static/js/main.66b340f5.js",
-    "static/js/787.0ede400a.chunk.js": "/languageStudy/static/js/787.0ede400a.chunk.js",
+    "main.css": "/languageStudy/static/css/main.20cb9b46.css",
+    "main.js": "/languageStudy/static/js/main.c701f5f9.js",
+    "static/js/787.1c8d8400.chunk.js": "/languageStudy/static/js/787.1c8d8400.chunk.js",
     "index.html": "/languageStudy/index.html",
-    "main.a9c2f64c.css.map": "/languageStudy/static/css/main.a9c2f64c.css.map",
-    "main.66b340f5.js.map": "/languageStudy/static/js/main.66b340f5.js.map",
-    "787.0ede400a.chunk.js.map": "/languageStudy/static/js/787.0ede400a.chunk.js.map"
+    "main.20cb9b46.css.map": "/languageStudy/static/css/main.20cb9b46.css.map",
+    "main.c701f5f9.js.map": "/languageStudy/static/js/main.c701f5f9.js.map",
+    "787.1c8d8400.chunk.js.map": "/languageStudy/static/js/787.1c8d8400.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9c2f64c.css",
-    "static/js/main.66b340f5.js"
+    "static/css/main.20cb9b46.css",
+    "static/js/main.c701f5f9.js"
   ]
 }
